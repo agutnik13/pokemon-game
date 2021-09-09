@@ -9,13 +9,13 @@ const App = () => {
         hideBackgraund
         />
         <Layout
-        urlBg='./image/bg3.jpg'
+        urlBg='bg3'
         />
           <Layout
         title=""
         />
           <Layout
-        title=""
+        urlBg="bg1"
         />
     </>
   );
