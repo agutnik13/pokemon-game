@@ -1,22 +1,29 @@
 import s from './style.css';
 
+const getStyle = (colorBg) => {
+    if (colorBg) return { background: colorBg };
+    return {};
+}
 
+const getClasses = (urlBg) => {
+    if (urlBg) return "wrapper " + urlBg;
+    return "wrapper"
+}
 
-export const Layout = ({title, descr, urlBg, colorBg}) => {
-    return(
-        <section class="root">
-            <div class="wrapper">
+const Layout = ({ title, descr, urlBg, colorBg }) => {
+    return (
+        <section className="root">
+            <div className={getClasses(urlBg)} style={getStyle(colorBg)}>
                 <article>
-                    <div class="title">
+                    <div className="title">
                         <h3>{title}</h3>
-                        <span class="separator"></span>
+                        <span className="separator"></span>
                     </div>
-                    <div class="desc full">
+                    <div className="desc full">
                         <p>{descr}</p>
                     </div>
                 </article>
             </div>
-            <div className={urlBg}></div>
         </section>
     );
 }

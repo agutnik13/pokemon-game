@@ -1,3 +1,4 @@
+import Footer from './components/Footer';
 import Header from './components/Header'
 import Layout from './components/Layout'
 
@@ -9,14 +10,19 @@ const App = () => {
         hideBackgraund
       />
       <Layout
-        urlBg='bg3'
+        urlBg='bg1'
+        title= "Hi!"
+        descr= "This is the first layout!"
       />
       <Layout
-        title=""
-      />
+        colorBg="antiquewhite"
+        descr="This is the second layout!"
+        />
       <Layout
-        urlBg="bg1"
+        urlBg="bg3"
+        descr="This is the third layout!"
       />
+      <Footer/>
     </>
   );
 }
