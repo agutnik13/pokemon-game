@@ -18,9 +18,9 @@ export const Layout = ({title, descr, urlBg, colorBg}) => {
             </div>
             <div className={urlBg}></div>
         </section>
-    )
+    );
 }
 
-export const Footer =() =>{
 
-}
+
+export default Layout;

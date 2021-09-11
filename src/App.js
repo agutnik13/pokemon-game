@@ -1,22 +1,22 @@
-import HeaderBlock from './components/HeaderBlock'
-import { Header, Layout } from './components';
+import Header from './components/Header'
+import Layout from './components/Layout'
 
 const App = () => {
   return (
     <>
-      <HeaderBlock 
+      <Header 
         title="This is new Title!"
         hideBackgraund
-        />
-        <Layout
+      />
+      <Layout
         urlBg='bg3'
-        />
-          <Layout
+      />
+      <Layout
         title=""
-        />
-          <Layout
+      />
+      <Layout
         urlBg="bg1"
-        />
+      />
     </>
   );
 }
