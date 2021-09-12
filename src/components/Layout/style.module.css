@@ -13,15 +13,6 @@
     margin: 0 auto;
 }
 
-.bg3 {
-    background: url(../../image/bg3.jpg) bottom left repeat-x;
-}
-
-.bg1 {
-    background: url(../../image/bg1.jpg) bottom left repeat-x;
-}
-
-
 .root article {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
