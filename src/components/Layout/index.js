@@ -1,26 +1,29 @@
-import s from './style.css';
+import s from './style.module.css';
 
-const getStyle = (colorBg) => {
-    if (colorBg) return { background: colorBg };
-    return {};
-}
+const Layout = ({ title, children, urlBg, colorBg }) => {
+    const sectionStyle = {};
 
-const getClasses = (urlBg) => {
-    if (urlBg) return "wrapper " + urlBg;
-    return "wrapper"
-}
+    if (urlBg) {
+        sectionStyle.backgroundImage = `url(${urlBg})`;
+    }
 
-const Layout = ({ title, descr, urlBg, colorBg }) => {
+    if (colorBg) {
+        sectionStyle.backgroundColor = colorBg;
+    }
+
     return (
-        <section className="root">
-            <div className={getClasses(urlBg)} style={getStyle(colorBg)}>
+        <section
+            style={sectionStyle}
+            className={s.root}
+        >
+            <div className={s.wrapper}>
                 <article>
-                    <div className="title">
+                    <div className={s.title}>
                         <h3>{title}</h3>
-                        <span className="separator"></span>
+                        <span className={s.separator}></span>
                     </div>
-                    <div className="desc full">
-                        <p>{descr}</p>
+                    <div className={`${s.desc} ${s.full}`}>
+                        {children}
                     </div>
                 </article>
             </div>
